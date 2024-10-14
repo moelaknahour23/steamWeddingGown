@@ -1,6 +1,8 @@
 import './globals.css';
 import Navbar from './components/Navbar/index';
 import Footer from './components/Footer/Footer';
+import Banner from './components/Banner';
+import Features from './components/Gallery';
 
 export const metadata = {
 	title: 'Ketchen',
@@ -12,7 +14,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang='en'>
 			<body>
 				<Navbar />
-				{children}
+				<Banner />
+				<Features />
 				<Footer />
 			</body>
 		</html>
