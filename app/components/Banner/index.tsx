@@ -11,7 +11,7 @@ const Banner = () => {
 					<div className='grid grid-cols-1 lg:grid-cols-12 gap-1'>
 						<div className='col-span-6 flex flex-col justify-center'>
 							<h1 className='text-2xl lg:text-3xl font-semibold mb-5 text-lightgrey text-center lg:text-start'>
-								Welcome to <br /> Bride's Dream
+								Welcome to <br /> Bride&apos;s Dream
 							</h1>
 
 							<p className='text-sm sm:text-base lg:text-lg text-grey font-normal mb-10 text-center lg:text-start'>
