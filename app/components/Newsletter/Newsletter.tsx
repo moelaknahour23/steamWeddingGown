@@ -1,64 +1,83 @@
-"use client"
-import Image from "next/image";
-import { Fade } from "react-awesome-reveal";
+// components/Pricing.js
+import React from 'react';
 
-const Newsletter = () => {
-    return (
-        <div className='relative'>
-            <div className="mx-auto max-w-2xl bg-pink br-50 md:max-w-7xl mt-48 rounded-lg">
-                <div className="grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-12 xl:gap-x-8">
+const Pricing = () => {
+	return (
+		<section className='py-12 bg-gray-100 px-12'>
+			<div className='container mx-auto text-center'>
+				<h2 className='text-4xl font-bold mb-8'>Choose Your Plan</h2>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 '>
+					{/* Package 1 */}
+					<div className='bg-white shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300 ease-in-out'>
+						<h3 className='text-2xl font-semibold mb-4'>Basic</h3>
+						<p className='text-gray-500 mb-4'>Ideal for personal use.</p>
+						<div className='text-3xl font-bold mb-4'>
+							$19<span className='text-sm text-gray-500'>/month</span>
+						</div>
+						<ul className='mb-6'>
+							<li className='text-gray-600 mb-2'>10 GB Storage</li>
+							<li className='text-gray-600 mb-2'>Unlimited Bandwidth</li>
+							<li className='text-gray-600'>Basic Support</li>
+						</ul>
+						<a href='#' className='bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700'>
+							Get Started
+						</a>
+					</div>
 
-                    {/* COLUMN-1 */}
-                    <div className="col-span-7">
-                        <div className="m-10 lg:ml-32 lg:mt-20 lg:mb-20">
-                            <Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
-                                <h3 className="text-lg font-normal text-white mb-3 ls-51"> NEWSLETTER </h3>
-                            </Fade>
-                            <Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
-                                <h3 className="text-3xl md:text-5xl font-semibold text-white mb-8">
-                                    Subscribe our <br /> newsletter.
-                                </h3>
-                            </Fade>
+					{/* Package 2 */}
+					<div className='bg-white shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300 ease-in-out'>
+						<h3 className='text-2xl font-semibold mb-4'>Standard</h3>
+						<p className='text-gray-500 mb-4'>Perfect for small teams.</p>
+						<div className='text-3xl font-bold mb-4'>
+							$49<span className='text-sm text-gray-500'>/month</span>
+						</div>
+						<ul className='mb-6'>
+							<li className='text-gray-600 mb-2'>50 GB Storage</li>
+							<li className='text-gray-600 mb-2'>Unlimited Bandwidth</li>
+							<li className='text-gray-600'>Priority Support</li>
+						</ul>
+						<a href='#' className='bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700'>
+							Get Started
+						</a>
+					</div>
 
-                            <div>
-                                <Fade direction={'up'} delay={1200} cascade damping={1e-1} triggerOnce={true}>
-                                    <div className="relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full">
-                                        <input type="Email address" name="q" className="py-6 sm:py-8 text-sm w-full text-black bg-gray-900 rounded-full pl-4 par-87 focus:outline-none focus:text-black" placeholder="@ enter your email-address" autoComplete="off" />
-                                        <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-                                            <button type="submit" className="p-1 focus:outline-none focus:shadow-outline">
-                                                <Image src={'/images/Newsletter/arrow.svg'} alt="inputicon" width={57} height={71} />
-                                            </button>
-                                        </div>
-                                    </div>
-                                </Fade>
-                            </div>
+					{/* Package 3 */}
+					<div className='bg-white shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300 ease-in-out  border-blue-600'>
+						<h3 className='text-2xl font-semibold mb-4'>Premium</h3>
+						<p className='text-gray-500 mb-4'>Great for growing businesses.</p>
+						<div className='text-3xl font-bold mb-4'>
+							$99<span className='text-sm text-gray-500'>/month</span>
+						</div>
+						<ul className='mb-6'>
+							<li className='text-gray-600 mb-2'>200 GB Storage</li>
+							<li className='text-gray-600 mb-2'>Unlimited Bandwidth</li>
+							<li className='text-gray-600'>24/7 Support</li>
+						</ul>
+						<a href='#' className='bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700'>
+							Get Started
+						</a>
+					</div>
 
-                        </div>
-                    </div>
+					{/* Package 4 */}
+					<div className='bg-white shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300 ease-in-out'>
+						<h3 className='text-2xl font-semibold mb-4'>Enterprise</h3>
+						<p className='text-gray-500 mb-4'>Best for large organizations.</p>
+						<div className='text-3xl font-bold mb-4'>
+							$199<span className='text-sm text-gray-500'>/month</span>
+						</div>
+						<ul className='mb-6'>
+							<li className='text-gray-600 mb-2'>1 TB Storage</li>
+							<li className='text-gray-600 mb-2'>Unlimited Bandwidth</li>
+							<li className='text-gray-600'>Dedicated Support</li>
+						</ul>
+						<a href='#' className='bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700'>
+							Get Started
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
 
-                    {/* COLUMN-2 */}
-                    <div className="col-span-5 relative hidden md:block">
-                        <div>
-                            <Image src={'/images/Newsletter/soup.svg'} alt="soup-image" width={626} height={602} className='-mt-24' />
-                        </div>
-                        <div className="absolute top-[78%]">
-                            <Image src={'/images/Newsletter/onion.svg'} alt="onion-image" width={300} height={122} />
-                        </div>
-                        <div className="absolute top-[30%] right-[-23%] hidden lg:block">
-                            <Image src={'/images/Newsletter/lec.svg'} alt="lettuce-image" width={300} height={122} />
-                        </div>
-                        <div className="absolute bottom-[10%] left-[0%]">
-                            <Image src={'/images/Newsletter/yellow.svg'} alt="yellow-image" width={59} height={59} />
-                        </div>
-                        <div className="absolute bottom-[20%] right-[20%]">
-                            <Image src={'/images/Newsletter/blue.svg'} alt="blue-image" width={25} height={25} />
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default Newsletter;
+export default Pricing;

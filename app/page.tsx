@@ -8,13 +8,12 @@ import Newsletter from './components/Newsletter/Newsletter';
 export default function Home() {
 	return (
 		<main>
-			{/* <Banner />
-			<Features /> */}
-			{/* 
+			<Banner />
 			<Cook />
-			<Expert />
-			<Gallery />
-			<Newsletter /> */}
+			<Features />
+			{/* <Expert /> */}
+			{/* <Gallery /> */}
+			<Newsletter />
 		</main>
 	);
 }

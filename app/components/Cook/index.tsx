@@ -1,50 +1,34 @@
-"use client"
+'use client';
 import Image from 'next/image';
-import { Fade } from "react-awesome-reveal";
-
+import { Fade } from 'react-awesome-reveal';
 
 const Cook = () => {
+	return (
+		<div className='relative' id='cook-section'>
+			<div className='mx-auto max-w-7xl sm:pb-16 px-6'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 my-16'>
+					<div className='flex justify-start'>
+						<Image src='/images/Cook/about-6.png' alt='about-us-image' width={400} height={100} />
+					</div>
 
-    return (
-        <div className='relative' id="cook-section">
-            <div className="mx-auto max-w-7xl lg:pt-20 sm:pb-24 px-6">
-
-                <div className='absolute right-0 bottom-[-18%] hidden lg:block'>
-                    <Image src={'/images/Cook/burger.png'} alt="burger-image" width={463} height={622} />
-                </div>
-
-                <div className='grid grid-cols-1 lg:grid-cols-12 my-16 space-x-5'>
-
-                    <div className='col-span-6 flex justify-start'>
-                        <Image src="/images/Cook/cook.png" alt="nothing" width={636} height={808} />
-                    </div>
-
-
-                    <div className='col-span-6 flex flex-col justify-center'>
-                        <Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
-                            <h2 className='text-pink text-lg font-normal mb-3 ls-51 uppercase text-start'>cook with us</h2>
-                        </Fade>
-                        <Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
-                            <h3 className="text-3xl lg:text-5xl font-semibold text-black text-start">
-                                Cooking together with the expert.
-                            </h3>
-                        </Fade>
-                        <Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
-                            <p className='text-grey md:text-lg font-normal mb-10 text-start mt-2'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem </p>
-                            <p className='text-grey md:text-lg font-normal mb-10 text-start mt-1'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium....</p>
-                            <div className='flex align-middle justify-center md:justify-start'>
-                                <button className='text-xl font-medium rounded-full text-white py-5 px-6 bg-pink lg:px-10 mr-6'>Learn more</button>
-                            </div>
-                        </Fade>
-                    </div>
-
-
-
-                </div>
-
-            </div>
-        </div >
-    )
-}
+					<div className='flex flex-col justify-center'>
+						<Fade direction={'up'} delay={100} cascade damping={0.05} triggerOnce={true}>
+							<h3 className='text-3xl lg:text-5xl font-semibold text-black text-start'>About Us</h3>
+						</Fade>
+						<Fade direction={'up'} delay={400} cascade damping={0.05} triggerOnce={true}>
+							<p className='text-grey md:text-lg font-normal mb-10 text-start mt-2'>
+								Ensure your wedding day is flawless with our on-site steaming service. We come to your location before the wedding to steam wedding gowns, tuxedos,
+								or any other garments, ensuring a crisp and clean look. Our professional team is dedicated to providing high-quality service, paying attention to
+								every detail, so you can feel confident and beautiful on your special day. We understand the importance of looking perfect, which is why we arrive
+								on time and with all the necessary equipment to make sure your attire is immaculate. Trust us to help you look your best, and enjoy peace of mind
+								knowing that your garments will be ready for your big moment!
+							</p>
+						</Fade>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
 
 export default Cook;

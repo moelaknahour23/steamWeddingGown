@@ -26,7 +26,26 @@ html:not([data-scroll='0']) .navbar {
 }
 
 .card-b {
-	background: linear-gradient(180deg, #f8f6f6 0%, #f8f6f6 0.01%, rgba(248, 246, 246, 0) 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px; /* Add padding as needed */
+	border-radius: 1.5rem; /* Rounded corners */
+	background-color: white; /* Ensure the background is white or desired color */
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better separation */
+}
+
+.card-b h3 {
+	margin: 0; /* Remove all margin */
+	line-height: 1; /* Control the line height */
+}
+
+.work-img-bg {
+	margin-bottom: 10px; /* Reduce margin to bring the image closer to the top */
+}
+
+.work-img-bg img {
+	margin-top: 0; /* Ensure no margin on the top of the image */
 }
 
 .ls-51 {
