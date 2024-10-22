@@ -127,3 +127,8 @@ html:not([data-scroll='0']) .navbar {
 .par-87 {
 	padding-right: 87px;
 }
+
+input[type='checkbox'] {
+	transform: scale(1.5); /* or set width and height if preferred */
+	margin-right: 10px;
+}
