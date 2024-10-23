@@ -2,8 +2,10 @@
 import Image from 'next/image';
 import { Fade } from 'react-awesome-reveal';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Banner = () => {
+	const router = useRouter();
 	return (
 		<div>
 			<div id='home-section' className='bg-lightpink flex items-center'>
@@ -20,11 +22,17 @@ const Banner = () => {
 							</p>
 
 							<div className='md:flex align-middle justify-center lg:justify-start'>
-								<button className='text-lg w-full md:w-auto font-medium rounded-full text-white py-4 px-5 bg-pink lg:px-10 mr-4'>
-									<Link href='#cook-section'>Booking</Link>
+								<button
+									onClick={() => router.push('/booking')}
+									className='text-lg w-full md:w-auto font-medium rounded-full text-white py-4 px-5 bg-pink lg:px-10 mr-4'
+								>
+									Booking
 								</button>
-								<button className='flex border w-full md:w-auto mt-4 md:mt-0 border-pink justify-center rounded-full text-lg font-medium items-center py-4 px-8 text-pink hover:text-white hover:bg-pink'>
-									<Link href='#about-section'>Contact Us</Link>
+								<button
+									onClick={() => router.push('/contact')}
+									className='flex border w-full md:w-auto mt-4 md:mt-0 border-pink justify-center rounded-full text-lg font-medium items-center py-4 px-8 text-pink hover:text-white hover:bg-pink'
+								>
+									Contact Us
 								</button>
 							</div>
 						</div>

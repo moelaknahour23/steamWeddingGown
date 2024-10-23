@@ -15,18 +15,13 @@ interface socialLinks {
 
 const socialLinks: socialLinks[] = [
 	{
-		imgSrc: '/images/Footer/facebook.svg',
+		imgSrc: 'https://img.icons8.com/fluent/30/000000/facebook-new.png',
 		link: 'https://facebook.com',
 		width: 10,
 	},
 	{
-		imgSrc: '/images/Footer/insta.svg',
+		imgSrc: 'https://img.icons8.com/fluent/30/000000/instagram-new.png',
 		link: 'https://instagram.com',
-		width: 14,
-	},
-	{
-		imgSrc: '/images/Footer/twitter.svg',
-		link: 'https://twitter.com',
 		width: 14,
 	},
 ];
@@ -56,28 +51,9 @@ const products: ProductType[] = [
 
 const footer = () => {
 	return (
-		<div className='mx-auto max-w-2xl pt-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
-			<div className='my-4 grid grid-cols-1 gap-y-10 sm:grid-cols-6 lg:grid-cols-12'>
-				{/* COLUMN-1 */}
-				<div className='sm:col-span-6 lg:col-span-5'>
-					<div className='flex flex-shrink-0 items-center border-right'>
-						<div className='mr-16'>
-							<Image src='/images/Logo/logo-2.png' alt='logo' width={130} height={130} />
-						</div>
-						<div className='flex gap-4'>
-							{socialLinks.map((item, i) => (
-								<Link href={item.link} key={i}>
-									<div className='bg-white h-10 w-10 shadow-xl text-base rounded-full flex items-center justify-center footer-icons hover:bg-pink'>
-										<Image src={item.imgSrc} alt={item.imgSrc} width={item.width} height={2} className='sepia' />
-									</div>
-								</Link>
-							))}
-						</div>
-					</div>
-				</div>
-
-				{/* COLUMN-2 - Products List */}
-				<div className='flex flex-row  gap-12 mt-10'>
+		<footer className='flex flex-col space-y-10 justify-center m-10  border-t border-t-bordertop'>
+			<div className='space-y-10  pt-6'>
+				<nav className='flex justify-center flex-wrap gap-8 text-gray-500 font-medium'>
 					{products.map((product) => (
 						<div key={product.id} className='flex flex-col '>
 							<ul className='flex gap-6'>
@@ -91,33 +67,23 @@ const footer = () => {
 							</ul>
 						</div>
 					))}
-				</div>
-			</div>
+				</nav>
 
-			{/* All Rights Reserved */}
-			<div className='py-10 md:flex items-center justify-between border-t border-t-bordertop'>
-				<h4 className='text-darkgrey text-sm text-center md:text-start font-normal'>
-					@2023 - Chef&apos;s Kitchen. All Rights Reserved by{' '}
-					<Link href='https://adminmart.com/' target='_blank'>
-						{' '}
-						Adminmart.com
-					</Link>
-				</h4>
-				<div className='flex gap-5 mt-5 md:mt-0 justify-center md:justify-start'>
-					<h4 className='text-darkgrey text-sm font-normal'>
-						<Link href='/' target='_blank'>
-							Privacy policy
-						</Link>
-					</h4>
-					<div className='h-5 bg-bordertop w-0.5'></div>
-					<h4 className='text-darkgrey text-sm font-normal'>
-						<Link href='/' target='_blank'>
-							Terms & conditions
-						</Link>
-					</h4>
+				<div className='flex justify-center space-x-4'>
+					{socialLinks.map((item) => (
+						<a href={item.link} target='_blank' rel='noopener noreferrer'>
+							<img src={item.imgSrc} />
+						</a>
+					))}
 				</div>
+				<p className='text-center text-gray-700 font-medium'>
+					©2024 - All Rights Reserved by{' '}
+					<Link href='https://bridesdream.org' target='_blank' className='font-bold hover:underline'>
+						bridesdream.org
+					</Link>
+				</p>
 			</div>
-		</div>
+		</footer>
 	);
 };
 

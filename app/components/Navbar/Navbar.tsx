@@ -31,7 +31,7 @@ const Navbar = () => {
 		// <Disclosure as='nav' className='navbar'>
 		<>
 			<div className='z-50 mx-auto  p-3 md:p-6 lg:px-8 bg-white full-width'>
-				<div className='relative flex h-12 sm:h-20 items-center'>
+				<div className='relative flex h-12 sm:h-18 items-center'>
 					<div className='flex flex-1 items-center sm:justify-between'>
 						{/* LOGO */}
 
@@ -45,7 +45,7 @@ const Navbar = () => {
 						</div>
 						<div className='hidden sm:flex flex-shrink-0 items-center border-right'>
 							<Link href='/'>
-								<Image src='/images/Logo/logo-2.png' alt='logo' width={130} height={130} />
+								<Image src='/images/Logo/logo-2.png' alt='logo' width={100} height={100} />
 							</Link>
 							{/* <Link href='/' className='text-2xl font-semibold text-black ml-4'>
 								Chef&apos;s Kitchen.
