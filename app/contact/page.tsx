@@ -156,7 +156,7 @@ const Booking = () => {
 							</div>
 							<div>
 								<p className='text-lg font-bold'>
-									Thank you! <span className='font-light'> we've recived your request and will call you shortly.</span>
+									Thank you! <span className='font-light'> we&apos;ve recived your request and will call you shortly.</span>
 								</p>
 							</div>
 						</div>

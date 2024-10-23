@@ -164,7 +164,7 @@ const Booking = () => {
 				{submissionSuccess ? (
 					<div className=' text-green-500 animate-fadeIn bg-lightGreem'>
 						<h2 className='text-xl text-center font-bold text-green py-6 px-4'>
-							Thank you! <span className='font-light'>we've recived your request and will call you shortly.</span>
+							Thank you! <span className='font-light'>we&apos;ve recived your request and will call you shortly.</span>
 						</h2>
 					</div>
 				) : (

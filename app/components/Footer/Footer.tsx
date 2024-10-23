@@ -70,8 +70,8 @@ const footer = () => {
 				</nav>
 
 				<div className='flex justify-center space-x-4'>
-					{socialLinks.map((item) => (
-						<a href={item.link} target='_blank' rel='noopener noreferrer'>
+					{socialLinks.map((item, index) => (
+						<a key={index} href={item.link} target='_blank' rel='noopener noreferrer'>
 							<img src={item.imgSrc} />
 						</a>
 					))}
