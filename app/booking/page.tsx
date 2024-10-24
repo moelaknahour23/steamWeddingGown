@@ -222,6 +222,7 @@ const Booking = () => {
 									id='date'
 									type='date'
 									value={formData.date}
+									placeholder='Enter your Wedding Date'
 									onChange={handleChange}
 									style={{
 										WebkitAppearance: 'none',
@@ -258,6 +259,7 @@ const Booking = () => {
 									type='time'
 									value={formData.time}
 									onChange={handleChange}
+									placeholder='Enter your Wedding Time'
 									style={{
 										WebkitAppearance: 'none',
 										MozAppearance: 'none',
