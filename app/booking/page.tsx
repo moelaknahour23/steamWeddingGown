@@ -223,7 +223,13 @@ const Booking = () => {
 									type='date'
 									value={formData.date}
 									onChange={handleChange}
-									style={{ minWidth: '100%' }}
+									style={{
+										WebkitAppearance: 'none',
+										MozAppearance: 'none',
+										appearance: 'none', // Removes default styles
+										width: '100%', // Full width
+										height: '40px', // Force height for consistent input size
+									}}
 								/>
 								{validationErrors.date && <p className='text-red text-sm'>{validationErrors.date}</p>}
 							</div>
@@ -251,6 +257,13 @@ const Booking = () => {
 									type='time'
 									value={formData.time}
 									onChange={handleChange}
+									style={{
+										WebkitAppearance: 'none',
+										MozAppearance: 'none',
+										appearance: 'none', // Removes default styles
+										width: '100%', // Full width
+										height: '40px', // Force height for consistent input size
+									}}
 								/>
 							</div>
 							<div className='mb-4'>
