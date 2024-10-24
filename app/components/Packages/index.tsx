@@ -4,7 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 
 const Packages = () => {
 	return (
-		<div className='mx-auto max-w-8xl px-12  py-12' id='services-section'>
+		<div className='mx-auto max-w-8xl px-4  py-12' id='services-section'>
 			<div className='text-center mb-8'>
 				<p className='text-3xl lg:text-4xl font-semibold text-lightgrey'>Packages</p>
 			</div>
@@ -139,7 +139,7 @@ const Packages = () => {
 				<div className='flex flex-col  max-w-[350px] items-center bg-gradient-to-br from-blue100 via-orange100 to-purple100 p-8 rounded-lg shadow-lg relative border-8 border-orange200'>
 					<div>
 						<h2 className='font-extrabold text-3xl text-center mb-2 '>Platinum</h2>
-						<p className='opacity-60 text-center'>Premium Formal Package</p>
+						<p className='opacity-60 text-center'>Premium Package</p>
 						<div className='flex flex-col items-center my-8'>
 							<div className='flex items-center space-x-2'>
 								<p className='text-md line-through text-gray-500'>$690</p>

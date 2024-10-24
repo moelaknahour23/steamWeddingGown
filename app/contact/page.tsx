@@ -47,7 +47,7 @@ const ContactForm = () => {
 				{/* Right Info Section */}
 				<div className='w-full lg:w-2/3 space-y-4'>
 					{/* Address Section */}
-					<div className='bg-blue600 text-white p-6 rounded-lg flex items-center space-x-4'>
+					{/* <div className='bg-blue600 text-white p-6 rounded-lg flex items-center space-x-4'>
 						<FontAwesomeIcon icon={faMapMarkerAlt} className='h-8 w-8 text-white' />
 						<div>
 							<h3 className='font-semibold text-lg'>Address</h3>
@@ -56,11 +56,11 @@ const ContactForm = () => {
 								01984-8381
 							</p>
 						</div>
-					</div>
+					</div> */}
 
 					{/* Contact Section */}
 					<div className='bg-gray100 p-6 rounded-lg flex items-center space-x-4'>
-						<FontAwesomeIcon icon={faPhone} className='h-8 w-8 text-blue600' />
+						<FontAwesomeIcon icon={faPhone} className='h-8 w-8 text-pink' />
 						<div>
 							<h3 className='font-semibold text-lg'>Contact</h3>
 							<p className='text-sm'>You can contact us at:</p>
@@ -74,7 +74,7 @@ const ContactForm = () => {
 
 					{/* Email Section */}
 					<div className='bg-gray100 p-6 rounded-lg flex items-center space-x-4'>
-						<FontAwesomeIcon icon={faEnvelope} className='h-8 w-8 text-blue600' />
+						<FontAwesomeIcon icon={faEnvelope} className='h-8 w-8 text-pink' />
 						<div>
 							<h3 className='font-semibold text-lg'>Email</h3>
 							<p className='text-sm'>We&apos;re usually replying within 24 hours</p>
@@ -88,10 +88,10 @@ const ContactForm = () => {
 
 					{/* Working Hours Section */}
 					<div className='bg-gray100 p-6 rounded-lg flex items-center space-x-4'>
-						<FontAwesomeIcon icon={faClock} className='h-8 w-8 text-blue600' />
+						<FontAwesomeIcon icon={faClock} className='h-8 w-8 text-pink' />
 						<div>
 							<h3 className='font-semibold text-lg'>Working Hours</h3>
-							<p className='text-sm'>Mon to Sunday - 9:00 am to 7:00 pm</p>
+							<p className='text-sm'>Monday to Sunday - 9:00 am to 7:00 pm</p>
 						</div>
 					</div>
 				</div>
