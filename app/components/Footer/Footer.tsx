@@ -30,7 +30,7 @@ const products: ProductType[] = [
 	{
 		id: 1,
 		section: 'Home',
-		link: ['#home-section'],
+		link: ['/#home-section'],
 	},
 	{
 		id: 2,
