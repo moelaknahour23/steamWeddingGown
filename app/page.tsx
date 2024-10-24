@@ -12,8 +12,6 @@ export default function Home() {
 			<Services />
 			<Pricing />
 			<Packages />
-			{/* <Expert /> */}
-			{/* <Gallery /> */}
 		</main>
 	);
 }

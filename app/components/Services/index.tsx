@@ -56,10 +56,8 @@ const Services = () => {
 		<div>
 			{isVisible && (
 				<div className='mx-auto max-w-8xl px-12  py-12' id='services-section'>
-					<div className='text-center mb-14'>
-						<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
-							<p className='text-3xl lg:text-5xl font-semibold text-lightgrey'>Services</p>
-						</Fade>
+					<div className=' text-center mb-14 '>
+						<p className='text-3xl lg:text-4xl font-semibold text-lightgrey'>Services</p>
 					</div>
 
 					<div className='grid sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-10 mt-16'>
