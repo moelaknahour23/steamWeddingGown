@@ -26,10 +26,9 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
 				<article className='relative w-340px max-w-lg pb-10 flex flex-col space-y-6 h-full'>
 					<header className='px-4 py-4 flex items-center justify-between'>
 						<div className='flex flex-shrink-0 items-center border-right'>
-							<Image src='/images/Logo/logo-2.png' alt='logo' width={80} height={80} />
-							{/* <Link href='/' className='text-2xl font-semibold text-black ml-4'>
-								Chef&apos;s Kitchen.
-							</Link> */}
+							<Link href='/'>
+								<Image src='/images/Logo/logo-2.png' alt='logo' width={80} height={80} />
+							</Link>
 						</div>
 
 						<XMarkIcon

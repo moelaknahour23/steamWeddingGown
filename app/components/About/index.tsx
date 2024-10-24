@@ -2,9 +2,9 @@
 import Image from 'next/image';
 import { Fade } from 'react-awesome-reveal';
 
-const Cook = () => {
+const About = () => {
 	return (
-		<div className='relative' id='cook-section'>
+		<div className='relative' id='about-section'>
 			<div className='mx-auto max-w-7xl sm:pb-16 px-6'>
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 my-16'>
 					<div className='flex justify-start'>
@@ -31,4 +31,4 @@ const Cook = () => {
 	);
 };
 
-export default Cook;
+export default About;

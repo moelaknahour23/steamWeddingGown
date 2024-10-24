@@ -21,17 +21,18 @@ const cardData: cardDataType[] = [
 		link: 'Learn more',
 	},
 	{
-		imgSrc: '/images/Features/bridal.jpg',
-		heading: 'Bridal Party Attire',
-		subheading: 'Steaming services for bridesmaids dresses and other bridal party garments, ensuring a polished look for all members.',
-		link: 'Learn more',
-	},
-	{
 		imgSrc: '/images/Features/tuxedoSteamingLogo.png',
 		heading: 'Tuxedo Steaming',
 		subheading: 'Expert steaming for tuxedos, providing a crisp and clean appearance for grooms and groomsmen.',
 		link: 'Learn more',
 	},
+	{
+		imgSrc: '/images/Features/bridal.jpg',
+		heading: 'Bridal Party Attire',
+		subheading: 'Steaming services for bridesmaids dresses and other bridal party garments, ensuring a polished look for all members.',
+		link: 'Learn more',
+	},
+
 	{
 		imgSrc: '/images/Features/otherFormalDressSteaming.jpg',
 		heading: 'Other Formal Dress Steaming',
@@ -40,7 +41,7 @@ const cardData: cardDataType[] = [
 	},
 ];
 
-const Work = () => {
+const Services = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	useEffect(() => {
 		// Set a timeout to change the visibility state after the component mounts
@@ -54,7 +55,7 @@ const Work = () => {
 	return (
 		<div>
 			{isVisible && (
-				<div className='mx-auto max-w-8xl px-12 bg-lightpink py-12' id='about-section'>
+				<div className='mx-auto max-w-8xl px-12 bg-lightpink py-12' id='services-section'>
 					<div className='text-center mb-14'>
 						<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
 							<p className='text-3xl lg:text-5xl font-semibold text-lightgrey'>Services</p>
@@ -78,4 +79,4 @@ const Work = () => {
 	);
 };
 
-export default Work;
+export default Services;

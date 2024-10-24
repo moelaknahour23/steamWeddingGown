@@ -29,23 +29,23 @@ const socialLinks: socialLinks[] = [
 const products: ProductType[] = [
 	{
 		id: 1,
-		section: 'Company',
-		link: ['About'],
+		section: 'Home',
+		link: ['#home-section'],
 	},
 	{
 		id: 2,
-		section: 'Contact',
-		link: ['Services'],
+		section: 'About us',
+		link: ['/#about-section'],
 	},
 	{
 		id: 3,
-		section: 'More',
-		link: ['Pricing'],
+		section: 'Services',
+		link: ['/#services-section'],
 	},
 	{
 		id: 3,
-		section: 'More',
-		link: ['Contact'],
+		section: 'Pricing',
+		link: ['/#pricing-section'],
 	},
 ];
 
@@ -59,8 +59,8 @@ const footer = () => {
 							<ul className='flex gap-6'>
 								{product.link.map((link: string, index: number) => (
 									<li key={index}>
-										<Link href='/' className='text-footerlinks text-base font-normal opacity-70 hover:text-black'>
-											{link}
+										<Link href={link} className='text-footerlinks text-base font-normal opacity-70 hover:text-black'>
+											{product.section}
 										</Link>
 									</li>
 								))}

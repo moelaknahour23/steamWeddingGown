@@ -10,18 +10,10 @@ const Booking = () => {
 	const [charCount, setCharCount] = useState(0); // New state for character count
 	const maxMessageLength = 300; // Maximum character length for the message
 	const minMessageLength = 5;
-
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
 		phone: '',
-		location: '',
-		date: '',
-		time: '',
-		service1: '',
-		service2: '',
-		service3: '',
-		service4: '',
 		message: '',
 	});
 
@@ -29,7 +21,6 @@ const Booking = () => {
 		name: '',
 		email: '',
 		phone: '',
-		date: '',
 		message: '',
 	});
 
@@ -47,6 +38,7 @@ const Booking = () => {
 	const handleChange = (e: any) => {
 		const { id, value, checked, type } = e.target;
 
+		// For message field, prevent typing beyond 300 characters
 		if (id === 'message') {
 			if (value.length <= 300) {
 				setFormData((prevState) => ({
@@ -58,6 +50,7 @@ const Booking = () => {
 			return; // Exit early if the character limit is reached
 		}
 
+		// For other fields
 		setFormData((prevState) => ({
 			...prevState,
 			[id]: type === 'checkbox' ? (checked ? value : '') : id === 'phone' ? formatPhoneNumber(value) : value,
@@ -65,7 +58,7 @@ const Booking = () => {
 	};
 
 	const validateForm = () => {
-		let errors = { name: '', email: '', phone: '', date: '', message: '' };
+		let errors = { name: '', email: '', phone: '', message: '' };
 		let isValid = true;
 
 		if (!formData.name) {
@@ -86,11 +79,10 @@ const Booking = () => {
 			errors.phone = 'Phone number is not valid';
 			isValid = false;
 		}
-		if (!formData.date) {
-			errors.date = 'Wedding date is required';
+		if (!formData.message) {
+			errors.message = 'Message is required';
 			isValid = false;
-		}
-		if (formData.message.length > maxMessageLength) {
+		} else if (formData.message.length > maxMessageLength) {
 			errors.message = `Message cannot exceed ${maxMessageLength} characters`;
 			isValid = false;
 		} else if (formData.message.length < minMessageLength) {
@@ -120,13 +112,6 @@ const Booking = () => {
 					from_name: formData.name,
 					from_email: formData.email,
 					from_phone: formData.phone,
-					from_weddingLocation: formData.location,
-					from_weddingDate: formData.date,
-					from_weddingTime: formData.time,
-					from_services1: formData.service1 || 'NA',
-					from_services2: formData.service2 || 'NA',
-					from_services3: formData.service3 || 'NA',
-					from_services4: formData.service4 || 'NA',
 					from_message: formData.message,
 				},
 				process.env.NEXT_PUBLIC_EMAILJS_USER_PUBLIC_KEY ?? ''
@@ -138,15 +123,9 @@ const Booking = () => {
 						name: '',
 						email: '',
 						phone: '',
-						location: '',
-						date: '',
-						time: '',
-						service1: '',
-						service2: '',
-						service3: '',
-						service4: '',
 						message: '',
 					});
+					setCharCount(0); // Reset character count
 					setSubmissionSuccess(true); // Show success message
 				},
 				(error: any) => {
@@ -157,19 +136,37 @@ const Booking = () => {
 	};
 
 	return (
-		<>
-			<div className='mx-4 sm:mx-auto  max-w-md  mt-10 bg-white shadow-lg rounded-lg overflow-hidden'>
+		<div className=''>
+			<div className='mx-4 sm:mx-auto max-w-md mt-10 bg-white shadow-lg rounded-lg overflow-hidden'>
 				{/* <div className='text-2xl py-4 px-6 bg-gray-900 text-white bg-pink text-center font-bold uppercase'>Book an Appointment</div> */}
 				{/* Show success message if the form is submitted successfully */}
 				{submissionSuccess ? (
-					<div className=' text-green-500 animate-fadeIn bg-lightGreem'>
-						<h2 className='text-xl text-center font-bold text-green py-6 px-4'>
-							Thank you! <span className='font-light'>we&apos;ve recived your request and will call you shortly.</span>
-						</h2>
+					// <div className=' text-green-500 animate-fadeIn bg-lightGreem'>
+					// 	<h2 className='text-xl text-center font-bold text-green py-6 px-4'>
+					// 		Thank you! <span className='font-light'>we've recived your request and will call you shortly.</span>
+					// 	</h2>
+					// </div>
+
+					<div className='bg-teal100 border-t-4 border-teal500 rounded-b text-teal900 px-4 py-3 shadow-md' role='alert'>
+						<div className='flex'>
+							<div className='py-1'>
+								<svg className='fill-current h-6 w-6 text-teal500 mr-4' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'>
+									<path d='M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z' />
+								</svg>
+							</div>
+							<div>
+								<p className='text-lg font-bold'>
+									Thank you! <span className='font-light'> we&apos;ve recived your request and will call you shortly.</span>
+								</p>
+							</div>
+						</div>
 					</div>
 				) : (
 					<>
-						<div className='text-2xl py-4 px-6 bg-gray-900 text-white bg-pink text-center font-bold uppercase'>Book an Appointment</div>
+						<div className='text-2xl space-x-2 py-4 px-6 bg-gray-900 text-white bg-pink text-center font-bold uppercase'>
+							<span>Contact</span>
+							<span>Us</span>
+						</div>
 						<form className='py-4 px-6' ref={form} onSubmit={handleSubmit}>
 							<div className='mb-4'>
 								<label className='block text-gray-700 mb-2' htmlFor='name'>
@@ -214,98 +211,8 @@ const Booking = () => {
 								{validationErrors.phone && <p className='text-red text-sm'>{validationErrors.phone}</p>}
 							</div>
 							<div className='mb-4'>
-								<label className='block text-gray-700 mb-2 ' htmlFor='date'>
-									Wedding Date <span className='text-red'>*</span>
-								</label>
-								<input
-									className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-									id='date'
-									type='date'
-									value={formData.date}
-									onChange={handleChange}
-									style={{ minWidth: '100%' }}
-								/>
-								{validationErrors.date && <p className='text-red text-sm'>{validationErrors.date}</p>}
-							</div>
-							<div className='mb-4'>
-								<label className='block text-gray-700 mb-2' htmlFor='location'>
-									Wedding Location
-								</label>
-								<input
-									className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-									id='location'
-									type='location'
-									placeholder='Enter your wedding location'
-									value={formData.location}
-									onChange={handleChange}
-								/>
-							</div>
-
-							<div className='mb-4'>
-								<label className='block text-gray-700 mb-2 text' htmlFor='time'>
-									Wedding Time
-								</label>
-								<input
-									className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-									id='time'
-									type='time'
-									value={formData.time}
-									onChange={handleChange}
-								/>
-							</div>
-							<div className='mb-4'>
-								<label className='block text-gray-700 font-medium mb-2'>Services</label>
-								<div className='f-mx-2'>
-									<div className='px-2 '>
-										<label htmlFor='service1' className='block text-gray-700 font-medium mb-2'>
-											<input
-												type='checkbox'
-												id='service1'
-												value='Wedding Gown Steaming'
-												checked={!!formData.service1}
-												className='mr-2'
-												onChange={handleChange}
-											/>
-											Wedding Gown Steaming
-										</label>
-									</div>
-									<div className='px-2 '>
-										<label htmlFor='service2' className='block text-gray-700 font-medium mb-2'>
-											<input type='checkbox' id='service2' value='Tuxedo Steaming' checked={!!formData.service2} className='mr-2' onChange={handleChange} />
-											Tuxedo Steaming
-										</label>
-									</div>
-									<div className='px-2 '>
-										<label htmlFor='service3' className='block text-gray-700 font-medium mb-2'>
-											<input
-												type='checkbox'
-												id='service3'
-												value='Bridal Party Attire'
-												checked={!!formData.service3}
-												className='mr-2'
-												onChange={handleChange}
-											/>
-											Bridal Party Attire
-										</label>
-									</div>
-									<div className='px-2 '>
-										<label htmlFor='service4' className='block text-gray-700 font-medium mb-2'>
-											<input
-												type='checkbox'
-												id='service4'
-												value='Other Formal Dress Steaming'
-												checked={!!formData.service4}
-												className='mr-2'
-												onChange={handleChange}
-											/>
-											Other Formal Dress Steaming
-										</label>
-									</div>
-								</div>
-							</div>
-							<div className='mb-4'>
 								<label className='block text-gray-700 mb-2' htmlFor='message'>
-									Message
+									Message <span className='text-red'>*</span>
 								</label>
 								<textarea
 									className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
@@ -320,12 +227,14 @@ const Booking = () => {
 								</p>
 								{validationErrors.message && <p className='text-red text-sm'>{validationErrors.message}</p>}
 							</div>
+
 							{/* Error message prompting to fix errors */}
 							{formSubmitted && Object.values(validationErrors).some((error) => error) && (
 								<div className='bg-orange100 border-l-4 border-orange500 text-orange700 p-4 my-4' role='alert'>
 									<p>Please fix the errors above before submittin.</p>
 								</div>
 							)}
+
 							<div className='flex items-center justify-center mb-4'>
 								<button className='bg-gray-900 text-white bg-pink py-2 px-4 rounded hover:bg-gray-800 focus:outline-none focus:shadow-outline' type='submit'>
 									{loading ? (
@@ -337,7 +246,7 @@ const Booking = () => {
 											Submitting...
 										</div>
 									) : (
-										'Book Appointment'
+										'Send Message'
 									)}
 								</button>
 							</div>
@@ -345,7 +254,7 @@ const Booking = () => {
 					</>
 				)}
 			</div>
-		</>
+		</div>
 	);
 };
 
