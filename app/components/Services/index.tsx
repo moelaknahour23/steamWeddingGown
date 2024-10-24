@@ -55,7 +55,7 @@ const Services = () => {
 	return (
 		<div>
 			{isVisible && (
-				<div className='mx-auto max-w-8xl px-12 bg-lightpink py-12' id='services-section'>
+				<div className='mx-auto max-w-8xl px-12  py-12' id='services-section'>
 					<div className='text-center mb-14'>
 						<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
 							<p className='text-3xl lg:text-5xl font-semibold text-lightgrey'>Services</p>

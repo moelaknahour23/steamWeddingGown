@@ -4,10 +4,10 @@ import { Fade } from 'react-awesome-reveal';
 
 const About = () => {
 	return (
-		<div className='relative' id='about-section'>
+		<div className='bg-lightpink relative' id='about-section'>
 			<div className='mx-auto max-w-7xl sm:pb-16 px-6'>
-				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 my-16'>
-					<div className='flex justify-start'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 pt-16'>
+					<div className='flex justify-center'>
 						<Image src='/images/Cook/about-6.png' alt='about-us-image' width={400} height={100} />
 					</div>
 

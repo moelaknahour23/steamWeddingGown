@@ -21,6 +21,7 @@ module.exports = {
 			red: ' #cc0000',
 			lightGreem: '#E0EFD8',
 			green: '#548454',
+			greenCheck: 'rgb(24 170 24)',
 			orange100: 'rgb(255 237 213)',
 			orange500: 'rgb(249 115 22)',
 			orange700: 'rgb(194 65 12)',
@@ -37,6 +38,18 @@ module.exports = {
 			footerlinks: 'rgba(54, 54, 54, 0.9)',
 			bordertop: 'rgba(105, 120, 131, 0.16)',
 			darkgrey: 'rgba(44, 9, 11, 0.8)',
+			slate100: 'rgb(241 245 249)', // bg-slate-100
+			zinc800: 'rgb(39 39 42)', // text-zinc-800
+			orange300: 'rgb(253 164 175)', // fill-orange-300
+			orange100: 'rgb(255 237 213)', // via-orange-100
+			orange200: 'rgb(254 215 170)', // border-orange-200
+			red400: 'rgb(248 113 113)', // fill-red-400, bg-red-400
+			violet400: 'rgb(139 92 246)', // border-violet-400
+			violet100: 'rgb(237 233 254)', // hover:bg-violet-100
+			blue100: 'rgb(219 234 254)', // from-blue-100
+			purple100: 'rgb(237 233 254)', // to-purple-100
+			zinc100: 'rgb(244 244 245)', // text-zinc-100
+			silver: '#c4c4c4',
 		},
 		fontSize: {
 			xs: ['0.75rem', { lineHeight: '1rem' }],

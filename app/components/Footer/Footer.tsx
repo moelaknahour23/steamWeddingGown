@@ -51,14 +51,14 @@ const products: ProductType[] = [
 
 const footer = () => {
 	return (
-		<footer className='flex flex-col space-y-10 justify-center m-10  border-t border-t-bordertop'>
-			<div className='space-y-10  pt-6'>
+		<footer className='flex flex-col space-y-4 justify-center m-10  border-t border-t-bordertop'>
+			<div className='space-y-4  pt-6'>
 				<nav className='flex justify-center flex-wrap gap-8 text-gray-500 font-medium'>
 					{products.map((product) => (
 						<div key={product.id} className='flex flex-col '>
 							<ul className='flex gap-6'>
 								{product.link.map((link: string, index: number) => (
-									<li key={index}>
+									<li key={index} className=' hover:scale-110 transition duration-300 ease-in-out'>
 										<Link href={link} className='text-footerlinks text-base font-normal opacity-70 hover:text-black'>
 											{product.section}
 										</Link>
@@ -72,7 +72,7 @@ const footer = () => {
 				<div className='flex justify-center space-x-4'>
 					{socialLinks.map((item, index) => (
 						<a key={index} href={item.link} target='_blank' rel='noopener noreferrer'>
-							<img src={item.imgSrc} />
+							<img className='w-10  hover:scale-110 transition duration-300 ease-in-out' src={item.imgSrc} />
 						</a>
 					))}
 				</div>

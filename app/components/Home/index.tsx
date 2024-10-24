@@ -8,7 +8,7 @@ const Home = () => {
 	const router = useRouter();
 	return (
 		<div>
-			<div id='home-section' className='bg-lightpink flex items-center'>
+			<div id='home-section' className='flex items-center'>
 				<div className='mx-auto max-w-7xl pt-4 px-6 '>
 					<div className='grid grid-cols-1 lg:grid-cols-12 gap-1'>
 						<div className='col-span-6 flex flex-col justify-center'>

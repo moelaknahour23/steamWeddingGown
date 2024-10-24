@@ -2,6 +2,7 @@ import Banner from './components/Home/index';
 import Services from './components/Services/index';
 import About from './components/About/index';
 import Pricing from './components/Pricing/index';
+import Packages from './components/Packages';
 
 export default function Home() {
 	return (
@@ -10,6 +11,7 @@ export default function Home() {
 			<About />
 			<Services />
 			<Pricing />
+			<Packages />
 			{/* <Expert /> */}
 			{/* <Gallery /> */}
 		</main>
