@@ -227,6 +227,7 @@ const Booking = () => {
 										WebkitAppearance: 'none',
 										MozAppearance: 'none',
 										appearance: 'none', // Removes default styles
+										backgroundColor: '#fff',
 										width: '100%', // Full width
 										height: '40px', // Force height for consistent input size
 									}}
@@ -261,6 +262,7 @@ const Booking = () => {
 										WebkitAppearance: 'none',
 										MozAppearance: 'none',
 										appearance: 'none', // Removes default styles
+										backgroundColor: '#fff',
 										width: '100%', // Full width
 										height: '40px', // Force height for consistent input size
 									}}
