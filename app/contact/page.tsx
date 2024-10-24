@@ -65,7 +65,7 @@ const ContactForm = () => {
 							<h3 className='font-semibold text-lg'>Contact</h3>
 							<p className='text-sm'>You can contact us at:</p>
 							<p className='text-sm'>
-								<Link className='text-blue400' href='tel:+6192191936'>
+								<Link className='text-blue400' href='tel:6192191936'>
 									619-219-1936
 								</Link>
 							</p>
