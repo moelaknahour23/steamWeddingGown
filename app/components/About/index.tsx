@@ -12,9 +12,9 @@ const About = () => {
 					</div>
 
 					<div className='flex flex-col justify-center'>
-						<h2 className='text-3xl lg:text-4xl font-semibold text-black lg:text-start text-center mb-10'>About Us</h2>
+						<h2 className='text-3xl lg:text-4xl font-semibold text-black lg:text-start text-center mb-8'>About Us</h2>
 
-						<p className='text-grey md:text-lg font-normal mb-10 text-start mt-2'>
+						<p className='text-grey md:text-lg font-normal mb-10 text-start'>
 							Ensure your wedding day is flawless with our on-site steaming service. We come to your location before the wedding to steam wedding gowns, tuxedos, or
 							any other garments, ensuring a crisp and clean look. Our professional team is dedicated to providing high-quality service, paying attention to every
 							detail, so you can feel confident and beautiful on your special day. We understand the importance of looking perfect, which is why we arrive on time and

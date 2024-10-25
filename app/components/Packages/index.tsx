@@ -4,12 +4,12 @@ import { Fade } from 'react-awesome-reveal';
 
 const Packages = () => {
 	return (
-		<div className='mx-auto max-w-8xl px-4  py-12' id='services-section'>
+		<div className='mx-auto max-w-8xl px-4 py-12' id='services-section'>
 			<div className='text-center mb-8'>
 				<p className='text-3xl lg:text-4xl font-semibold text-lightgrey'>Packages</p>
 			</div>
-			<div className='  grid sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-8 py-8 gap-8 text-zinc800 mt-10 '>
-				<div className='flex flex-col  max-w-[350px] items-center bg-gradient-to-br from-blue100 via-orange100 to-purple100 p-8 rounded-lg shadow-lg relative border-8 border-orange200'>
+			<div className='  grid sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-8  gap-8 text-zinc800 '>
+				<div className='flex flex-col  max-w-[300px] h-[400px] items-center bg-gradient-to-br from-blue100 via-orange100 to-purple100 p-4 rounded-lg shadow-lg relative border-8 border-orange200'>
 					<div>
 						<h2 className='font-extrabold text-3xl text-center mb-2'>Starter</h2>
 						<p className='opacity-60 text-center'>Wedding Gown & Tuxedo Package</p>
@@ -45,7 +45,7 @@ const Packages = () => {
 					</div>
 				</div>
 
-				<div className='flex flex-col  max-w-[350px] items-center bg-gradient-to-br from-blue100 via-orange100 to-purple100 p-8 rounded-lg shadow-lg relative border-8 border-orange200 '>
+				<div className='flex flex-col  max-w-[300px] h-[400px] items-center bg-gradient-to-br from-blue100 via-orange100 to-purple100 p-4 rounded-lg shadow-lg relative border-8 border-orange200 '>
 					<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true' className='w-20 h-20 absolute -top-11 -left-11 fill-red400'>
 						<path
 							fill-rule='evenodd'
@@ -102,7 +102,7 @@ const Packages = () => {
 						</p>
 					</div>
 				</div>
-				<div className='flex flex-col  max-w-[350px] items-center bg-gradient-to-br from-blue100 via-orange100 to-purple100 p-8 rounded-lg shadow-lg relative border-8 border-orange200'>
+				<div className='flex flex-col  max-w-[300px] h-[400px] items-center bg-gradient-to-br from-blue100 via-orange100 to-purple100 p-4 rounded-lg shadow-lg relative border-8 border-orange200'>
 					<div>
 						<h2 className='font-extrabold text-3xl text-center mb-2'>Gold</h2>
 						<p className='opacity-60 text-center'>Bride & Bridal Package</p>
@@ -136,7 +136,7 @@ const Packages = () => {
 						</p>
 					</div>
 				</div>
-				<div className='flex flex-col  max-w-[350px] items-center bg-gradient-to-br from-blue100 via-orange100 to-purple100 p-8 rounded-lg shadow-lg relative border-8 border-orange200'>
+				<div className='flex flex-col  max-w-[300px] h-[400px] items-center bg-gradient-to-br from-blue100 via-orange100 to-purple100 p-4 rounded-lg shadow-lg relative border-8 border-orange200'>
 					<div>
 						<h2 className='font-extrabold text-3xl text-center mb-2 '>Platinum</h2>
 						<p className='opacity-60 text-center'>Premium Package</p>

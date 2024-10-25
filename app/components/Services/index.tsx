@@ -56,11 +56,11 @@ const Services = () => {
 		<div>
 			{isVisible && (
 				<div className='mx-auto max-w-8xl px-12  py-12' id='services-section'>
-					<div className=' text-center mb-14 '>
+					<div className=' text-center mb-8 '>
 						<p className='text-3xl lg:text-4xl font-semibold text-lightgrey'>Services</p>
 					</div>
 
-					<div className='grid sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-10 mt-16'>
+					<div className='grid sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-10 '>
 						{cardData.map((items, i) => (
 							<div className='card-b relative rounded-3xl flex flex-col items-center ' key={i}>
 								<div className='work-img-bg rounded-full flex justify-center mb-0'>
